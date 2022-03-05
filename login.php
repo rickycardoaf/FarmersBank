@@ -1,5 +1,7 @@
  <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 
     include("connection.php");
@@ -9,37 +11,63 @@ session_start();
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
         //something was posted
-        $user_name = $_POST['user_name'];
-        $password = $_POST['password'];
+        $user_name = mysqli_real_escape_string($con, $_POST['user_name']);
+        $password = mysqli_real_escape_string($con, $_POST['password']);
 
         if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
         {
 
             //read from database 
-            $query = "select * from users where user_name = '$user_name' limit 1";
-            $result = mysqli_query($con, $query);
+            $checkForEmail = mysqli_query($con, "SELECT user_id, user_name, password, email FROM users WHERE user_name = '".$user_name."'");
 
-            if($result)
-            {
-                if($result && mysqli_num_rows($result) > 0)
-                {
+            if($checkForEmail){
 
-                    $user_data = mysqli_fetch_assoc($result);
+                if(mysqli_num_rows($checkForEmail) > 0 ){
+
+                    //$userFound = mysqli_fetch_assoc($checkForEmail); 
+                    while($row = mysqli_fetch_assoc($checkForEmail)) {
+                        $dbpass = $row['password'];
+                        $u_id = $row['user_id'];
+                      }
+                    // echo $dbpass;
+                    // echo $u_id;
                     
-                    if($user_data['password'] == $password)
-                    {
-                        
-                        $_SESSION['user_id'] = $user_data['user_id'];
-                        header("Location: index.php");
-                        die;
-                    }
+                   
+                        if(password_verify($password, $dbpass)){ 
+                            $_SESSION['user_id'] = $u_id;
+                            header("Location: index.php");
+                        }
+                    
+                }else{
+
+                    $error = "Incorrect Username or Password";
+                    
                 }
             }
+
+            // $query = "select user_name, password, email from users where user_name = '$user_name' limit 1";
+            // $result = mysqli_query($con, $query);
+
+            // if($result)
+            // {
+            //     if($result && mysqli_num_rows($result) > 0)
+            //     {
+            //         $user_data = mysqli_fetch_assoc($result);
+                    
+            //         if($user_data['password'] == $password)
+            //         {
+            //             $_SESSION['user_id'] = $user_data['user_id'];
+            //             header("Location: index.php");
+            //             die;
+            //         }
+            //     }
+            // }
            
-            echo "Wrong username or password";
-        }else
-        {
-            echo "Wrong username or password!"; 
+            // echo "Wrong username or password";
+        }else{
+
+            $error = "Username or password should not be left empty";
+
         }
     }
 
@@ -50,60 +78,48 @@ session_start();
 <html>
 <head>
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
-<style type="text/css">
+<h2 align="center">Welcome to the Farmer's Bank Please login to continue</h2>
+<hr>
+<?php
+                if(isset($error)){
+                    
+                    echo '<div class="alert alert-danger" role="alert">
+                    '.$error.'
+                  </div>';
+                }else{
+                    echo "";
+                }
+            ?>
+<div id="mainContainer">
+    <div id="box">
 
-    #text{
+        <form method="post">
+        <h1 align="center">Login</h1>
+            
+            <label><img src="https://icon-library.com/images/user-icon-image/user-icon-image-20.jpg" width="20" height="20" /> Username </label> 
+            <input class="text" type="text" name="user_name" ><br><br>
+            <label><img src="https://www.maxpixel.net/static/photo/1x/Lock-Image-Security-Lock-Cyber-Security-Lock-Icon-1915628.png" width="26" height="25" /> Password</label> 
+            <input class="text" type="password" name="password" >
+            <br><br>
 
-        height: 25px;
-        border-radius: 5px;
-        padding: 4px;
-        border: solid thin #aaa;
-        width: 100%;
-    }
+            <input id="button" type="submit" value="Login" align="center">
+            <br><br>
 
-    #button{
-
-        padding: 10px;
-        width: 100px;
-        color: black;
-        background-color: lightblue;
-        border: none;
-    } 
-
-    
-
-    #box{
-
-        background-color: lightgrey;
-        margin: auto;
-        width: 300px;
-        padding: 20px;
-        border:  14px ridge #0c107a;
-    }
-
-</style>
-<center>
-<img src="https://play-lh.googleusercontent.com/vO2ZhuemEOzb7aKeJ2UWGKQdDp48VbXwLtmXQibhPvv92-NcRtCqdKjPtW0TPxV3JQ" width="450" height="200" />
-</center>
-<div id="box">
-
-    <form method="post">
-       <center> <div style="font-size: 20px;margin: 10px;color: black;">Login</div></center>
-        
-        <label><img src="https://icon-library.com/images/user-icon-image/user-icon-image-20.jpg" width="20" height="20" /> Username </label> 
-        <input id="text" type="text" name="user_name" required><br><br>
-        <label><img src="https://www.maxpixel.net/static/photo/1x/Lock-Image-Security-Lock-Cyber-Security-Lock-Icon-1915628.png" width="26" height="25" /> Password</label> 
-        <input id="text" type="password" name="password" required><br><br>
-
-        <center><input id="button" type="submit" value="Login"><br><br></center>
-
-        <a href="signup.php">Click to Signup</a><br><br>
-    </form>
-
+            <a href="signup.php" id="suplink">Click to Signup</a><br><br>
+        </form>
+    </div>
+    <div id="imgDiv">
+    <img id="logoImg" src="images/fmimg.png"/>
+    </div>
 </div>
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

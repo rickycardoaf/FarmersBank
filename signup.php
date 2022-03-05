@@ -11,10 +11,10 @@ session_start();
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
         //something was posted
-        $name = $_POST['reg_name'];
-        $email = $_POST['reg_email'];
-        $user_name = $_POST['reg_user_name'];
-        $password = $_POST['reg_password'];
+        $name = mysqli_real_escape_string($con, $_POST['reg_name']);
+        $email = mysqli_real_escape_string($con, $_POST['reg_email']);
+        $user_name = mysqli_real_escape_string($con,$_POST['reg_user_name']);
+        $password = mysqli_real_escape_string($con,$_POST['reg_password']);
         //echo $name ." ". $email . " ".$user_name." " .$password;
 
         // $select = mysqli_query($conn, "SELECT * FROM users WHERE email = '".$_POST['email']."'");
@@ -124,7 +124,7 @@ session_start();
         </form>
     </div>
     <div id="imgDiv">
-        <img id="logoImg" src="https://play-lh.googleusercontent.com/vO2ZhuemEOzb7aKeJ2UWGKQdDp48VbXwLtmXQibhPvv92-NcRtCqdKjPtW0TPxV3JQ"/>
+        <img id="logoImg" src="images/fmimg.png"/>
     </div>
 </div>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">

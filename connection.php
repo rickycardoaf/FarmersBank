@@ -1,8 +1,8 @@
 <?php
 
-$dbhost  = "127.0.0.1:3307";
+$dbhost  = "localhost";
 $dbuser  = "root";
-$dbpass  = "";
+$dbpass  = "root";
 $dbname  = "login_user";
 
 if(!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
