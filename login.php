@@ -81,6 +81,9 @@ session_start();
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+    <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+
 
 </head>
 <body>
@@ -103,9 +106,22 @@ session_start();
         <form method="post">
         <h1 align="center">Login</h1>
             
-            <label><img src="https://icon-library.com/images/user-icon-image/user-icon-image-20.jpg" width="20" height="20" /> Username </label> 
+            <!-- <label><img src="https://icon-library.com/images/user-icon-image/user-icon-image-20.jpg" width="20" height="20" /> Username </label>  -->
+            <lord-icon
+                src="https://cdn.lordicon.com/pdpnqfoe.json"
+                trigger="loop"
+                colors="primary:#f24c00,secondary:#66d7ee"
+                style="width: 50px;height:50px">
+            </lord-icon>
+            <label for="">Username/Email</label>
             <input class="text" type="text" name="user_name" ><br><br>
-            <label><img src="https://www.maxpixel.net/static/photo/1x/Lock-Image-Security-Lock-Cyber-Security-Lock-Icon-1915628.png" width="26" height="25" /> Password</label> 
+            <!-- <label><img src="https://www.maxpixel.net/static/photo/1x/Lock-Image-Security-Lock-Cyber-Security-Lock-Icon-1915628.png" width="26" height="25" /> Password</label>  -->
+            <lord-icon
+                src="https://cdn.lordicon.com/xtrjgsiz.json"
+                trigger="loop"
+                style="width:50px;height:50px">
+            </lord-icon>
+            <label for="">Password</label>
             <input class="text" type="password" name="password" >
             <br><br>
 

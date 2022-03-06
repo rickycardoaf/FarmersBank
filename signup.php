@@ -102,16 +102,37 @@ session_start();
         <form method="post">
         <h1 align="center">Register</h1>
             
-            <label> Name </label> 
+             <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/ajkxzzfb.json"
+                trigger="loop"
+                style="width:50px;height:50px">
+            </lord-icon><label> Name </label> 
             <input class="text" type="text" name="reg_name" id="reg_name" value="<?php echo isset($name) ? $name : ''; ?>">
             <br><br>
-            <label>Email</label> 
-            <input class="text" type="emial" name="reg_email" id="reg_email" value="<?php echo isset($email) ? $email : ''; ?>">
+            <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/pdpnqfoe.json"
+                trigger="loop"
+                colors="primary:#f24c00,secondary:#66d7ee"
+                style="width: 50px;height:50px">
+            </lord-icon><label>Email</label> 
+           <label> Name </label> <input class="text" type="emial" name="reg_email" id="reg_email" value="<?php echo isset($email) ? $email : ''; ?>">
             <br><br>
-            <label> Username </label> 
+            <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/ajkxzzfb.json"
+                trigger="loop"
+                style="width:50px;height:50px">
+            </lord-icon> <label> Username </label> 
             <input class="text" type="text" name="reg_user_name" id="reg_user_name" value="<?php echo isset($user_name) ? $user_name : ''; ?>">
             <br><br>
-            <label>Password</label> 
+            <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/xtrjgsiz.json"
+                trigger="loop"
+                style="width:50px;height:50px">
+            </lord-icon><label>Password</label> 
             <input class="text" type="password" name="reg_password" id="reg_password">
             <br><br>
 
