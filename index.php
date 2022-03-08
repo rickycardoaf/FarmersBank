@@ -13,7 +13,12 @@ include("functions.php");
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?php if(isset($user_data['user_name'])){echo $user_data['user_name'] ;}?></title>
+    <title><?php if(isset($user_data['user_name']) && isset($_SESSION['user_id'])){
+
+        echo $user_data['user_name'];
+        $uid = $_SESSION['user_id'];
+        
+      }?></title>
     <link rel="stylesheet" href="mainC.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -166,13 +171,12 @@ th {
           <div class="accInfo">
           <table stye="">
             <tr>
-              <th>Transaction Date</th>
-              <th>Transaction Type</th>
-              <th>Amount</th>
-              <th>Debit/Credit</th>
+              <th>Account type</th>
+              <th>Account Num.</th>
+              <th>Balance($)</th>
             </tr>
             <?php
-                  $checkForAccount = mysqli_query($con, "SELECT name, email FROM users WHERE user_name = '".$user_data['user_name']."'");
+                  $checkForAccount = mysqli_query($con, "SELECT accountNum,accountType, accountBalance  FROM accountSum WHERE user_id = '".$uid."'");
 
                   if($checkForAccount){
               
@@ -180,15 +184,15 @@ th {
               
                           //$userFound = mysqli_fetch_assoc($checkForEmail); 
                           while($row = mysqli_fetch_assoc($checkForAccount)) {
-                              $cusName = $row['name'];
-                              $cusEmail = $row['email'];
+                              $accNum = $row['accountNum'];
+                              $accType = $row['accountType'];
+                              $accBalance = $row['accountBalance'];
 
                               echo'
                                   <tr>
-                                    <td>'.$cusEmail.'</td>
-                                    <td>'.$cusName.'</td>
-                                    <td>'.$cusEmail.'</td>
-                                    <td>'.$cusName.'</td>
+                                    <td>'.$accType.'</td>
+                                    <td>'.$accNum.'</td>
+                                    <td>'.$accBalance.'</td>
                                   </tr>
                                 ';
                             }
