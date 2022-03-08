@@ -18,7 +18,8 @@ session_start();
         {
 
             //read from database 
-            $checkForEmail = mysqli_query($con, "SELECT user_id, user_name, password, email FROM users WHERE user_name = '".$user_name."'");
+            // fix OR clause
+            $checkForEmail = mysqli_query($con, "SELECT user_id, user_name, password, email FROM users WHERE user_name = '".$user_name."' OR email = '".$user_name."'");
 
             if($checkForEmail){
 
@@ -32,7 +33,7 @@ session_start();
                     // echo $dbpass;
                     // echo $u_id;
                     
-                   
+                        // verify hash against user typed password
                         if(password_verify($password, $dbpass)){ 
                             $_SESSION['user_id'] = $u_id;
                             header("Location: index.php");
@@ -84,11 +85,23 @@ session_start();
     <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
     <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
 
+<style>
+   #h1t{
+    width:100%; 
+    background-color: lightblue;
+    height:40px;
+   }
+   h1{
+    font-family: “Playfair Display”, “Didot”, "Times New Roman", Times, serif;
 
+   }
+</style>
 </head>
 <body>
+    <div id="h1t">
+        <!-- <h2 align="center" >Welcome to the Farmer's Bank Please login to continue</h2> -->
+    </div >
 
-<h2 align="center">Welcome to the Farmer's Bank Please login to continue</h2>
 <hr>
 <?php
                 if(isset($error)){
@@ -104,7 +117,7 @@ session_start();
     <div id="box">
 
         <form method="post">
-        <h1 align="center">Login</h1>
+        <h1 align="center">Login here please</h1>
             
             <!-- <label><img src="https://icon-library.com/images/user-icon-image/user-icon-image-20.jpg" width="20" height="20" /> Username </label>  -->
             <lord-icon

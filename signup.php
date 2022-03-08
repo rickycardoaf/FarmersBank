@@ -24,6 +24,7 @@ session_start();
         $uppC = preg_match('@[A-Z]@', $password);
         $number = preg_match('@[0-9]@', $password);
 
+        // validate fielf on the signup page
         if($name == ""){
             $error = "Your name is required";
         }elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -35,13 +36,29 @@ session_start();
         }elseif($password == ""){
             $error = "Password is required";
         }else{
-
-
-            $checkForEmail = mysqli_query($con, "SELECT email FROM users WHERE email = '".$email."'");
+            
+            
+            $checkForEmail = mysqli_query($con, "SELECT email, user_name FROM users WHERE user_name ='".$user_name."' OR email = '".$email."'");
         
             if(mysqli_num_rows($checkForEmail)){
 
-                $error = "Email address already exist.";
+                while($row = mysqli_fetch_assoc($checkForEmail)){
+
+                    $dbuname = $row['user_name'];
+                    $dbemail = $row['email'];
+
+                  }
+
+                //   check if username and email exist
+                  if($dbemail == $email){
+                    $error = "Email address already exist.";
+                  }
+
+                  if($dbuname == $user_name){
+                    $error = "Username address already exist.";
+                  }
+
+                
             
             }else{
 
@@ -135,7 +152,7 @@ session_start();
             </lord-icon><label>Password</label> 
             <input class="text" type="password" name="reg_password" id="reg_password">
             <br><br>
-
+            
             <input id="button" type="submit" value="Submit" align="center">
             
             
