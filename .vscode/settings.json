@@ -1,0 +1,7 @@
+{
+    "files.autoSave": "onWindowChange",
+    "editor.cursorStyle": "block-outline",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
+}

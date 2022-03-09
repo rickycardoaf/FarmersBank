@@ -140,7 +140,7 @@ th {
                         <div class="dropdown-menu information-grid">
                             <div>
                                 <div class="dropdown-links">
-                                    <a href="#" class="link">Within my bank</a>
+                                    <a href="transfer.php" class="link">Within my bank</a>
                                     <a href="#" class="link">Other Banks</a>
                                     <a href="#" class="link">Manage Beneficiaries</a>
                                 </div>
