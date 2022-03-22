@@ -12,6 +12,7 @@ include("functions.php");
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title><?php if(isset($user_data['user_name']) && isset($_SESSION['user_id'])){
 
@@ -19,116 +20,37 @@ include("functions.php");
         $uid = $_SESSION['user_id'];
         
       }?></title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
     <link rel="stylesheet" href="mainC.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <style>
-    .header {
- background-color: #F3F3F3;
-  display: flex;
-  align-items: baseline;
-  padding: .5rem;
-  gap: 1rem;
-}
+    <script>
+    document.addEventListener("click", e => {
+        const isDropdownButton = e.target.matches("[data-dropdown-button]")
+        if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
 
-.link {
-  background: none;
-  border: none;
-  text-decoration: none;
-  color: #777;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: pointer;
-  padding: 0;
-}
+        let currentDropdown
+        if (isDropdownButton) {
+            currentDropdown = e.target.closest("[data-dropdown]")
+            currentDropdown.classList.toggle("active")
+        }
 
-.dropdown.active > .link,
-.link:hover {
-  color: black;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  left: 0;
-  top: calc(100% + .25rem);
-  background-color: white;
-  padding: .75rem;
-  border-radius: .25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-
-.dropdown.active > .link + .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.information-grid {
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 2rem;
-}
-
-.dropdown-links {
-  display: flex;
-  flex-direction: column;
-  gap: .25rem;
-}
-
-.login-form > input {
-  margin-bottom: .5rem;
-}
-.mainContent{
-  height: 800px;
-  background-color: lightblue;
-}
-/* table */
-table{
-  width: 100%;
-  margin-top:30px; 
-  border:1 px solid black;
-}
-th, td {
-  padding: 15px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-tr:nth-child(even) {background-color: #f2f2f2;}
-th {
-  background-color: #04AA6D;
-  color: white;
-}
-    </style>
-     <script>
-        document.addEventListener("click", e => {
-            const isDropdownButton = e.target.matches("[data-dropdown-button]")
-            if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
-        
-            let currentDropdown
-            if (isDropdownButton) {
-                currentDropdown = e.target.closest("[data-dropdown]")
-                currentDropdown.classList.toggle("active")
-            }
-        
-            document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+        document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
             if (dropdown === currentDropdown) return
-             dropdown.classList.remove("active")
-            })
-         })
+            dropdown.classList.remove("active")
+        })
+    })
     </script>
 </head>
+
 <body>
-  <div class="mainContent">
+    <div class="mainContent">
         <div class="header">
-        <?php if(isset($user_data['user_name'])){
+            <?php if(isset($user_data['user_name'])){
             //echo $user_data['user_name'] ;
                 echo '<div id="userIfo">
                       <u>'.$user_data['user_name'].'</u>
@@ -166,16 +88,16 @@ th {
                 }
             ?>
         </div>
-       
+
         <div class="contentView">
-          <div class="accInfo">
-          <table stye="">
-            <tr>
-              <th>Account type</th>
-              <th>Account Num.</th>
-              <th>Balance($)</th>
-            </tr>
-            <?php
+            <div class="accInfo">
+                <table stye="">
+                    <tr>
+                        <th>Account type</th>
+                        <th>Account Num.</th>
+                        <th>Balance($)</th>
+                    </tr>
+                    <?php
                   $checkForAccount = mysqli_query($con, "SELECT accountNum,accountType, accountBalance  FROM accountSum WHERE user_id = '".$uid."'");
 
                   if($checkForAccount){
@@ -199,25 +121,27 @@ th {
                       }
                   }
                 ?>
-              </table>
-          </div>
+                </table>
+            </div>
 
-         
+
         </div>
-  </div>
-   <script type="text/javascript">
-     function getDetail(user_id){
-       $('#acc_id').html('');
+    </div>
+    <script type="text/javascript">
+    function getDetail(user_id) {
+        $('#acc_id').html('');
         $.ajax({
-        type: 'post',
-        url: 'index.php',
-        data: {user_id:user_id},
-        success: function(data){
-          $('#acc_id').html(data);
-        }
-      })
-     }
-     
-   </script>
+            type: 'post',
+            url: 'index.php',
+            data: {
+                user_id: user_id
+            },
+            success: function(data) {
+                $('#acc_id').html(data);
+            }
+        })
+    }
+    </script>
 </body>
+
 </html>

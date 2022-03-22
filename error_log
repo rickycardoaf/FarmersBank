@@ -1,0 +1,66 @@
+[20-Mar-2022 11:02:07 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:02:23 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:02:26 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:02:27 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:02:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:02:37 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:02:40 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:02:55 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:02:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:04:13 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:06:51 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:06:55 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:06:58 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:08:48 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:09:32 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:10:51 America/Chicago] PHP Warning:  mysqli_connect(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:10:51 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): php_network_getaddresses: getaddrinfo failed: Name or service not known in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:18:58 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'hummions_avaloni'@'198.57.247.179' to database 'hummions_loginuser' in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:18:58 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'hummions_avaloni'@'198.57.247.179' to database 'hummions_loginuser' in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:18:58 America/Chicago] PHP Notice:  Trying to get property 'connect_error' of non-object in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 15
+[20-Mar-2022 11:19:40 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'hummions'@'gator3215.hostgator.com' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:19:40 America/Chicago] PHP Notice:  Trying to get property 'connect_error' of non-object in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 15
+[20-Mar-2022 11:20:07 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'hummions'@'gator3215.hostgator.com' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:20:07 America/Chicago] PHP Notice:  Trying to get property 'connect_error' of non-object in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 15
+[20-Mar-2022 11:20:07 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home1/hummions/public_html/hwBackup/FarmersBank/login.php on line 14
+[20-Mar-2022 11:20:07 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home1/hummions/public_html/hwBackup/FarmersBank/login.php on line 15
+[20-Mar-2022 11:20:27 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'hummions'@'gator3215.hostgator.com' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:20:27 America/Chicago] PHP Notice:  Trying to get property 'connect_error' of non-object in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 15
+[20-Mar-2022 11:20:46 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'hummions_avaloni'@'198.57.247.179' to database 'hummions_loginuser' in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 8
+[20-Mar-2022 11:20:46 America/Chicago] PHP Notice:  Trying to get property 'connect_error' of non-object in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 15
+[20-Mar-2022 11:21:11 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1044): Access denied for user 'hummions_avaloni'@'198.57.247.179' to database 'hummions_loginuser' in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 9
+[20-Mar-2022 11:23:58 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'hummions_8956_cg'@'gator3215.hostgator.com' (using password: YES) in /home1/hummions/public_html/hwBackup/FarmersBank/connection.php on line 9
+[20-Mar-2022 11:33:00 America/Chicago] PHP Notice:  Undefined index: transation_type in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 178
+[20-Mar-2022 11:33:00 America/Chicago] PHP Notice:  Undefined index: transation_type in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 178
+[20-Mar-2022 11:34:02 America/Chicago] PHP Notice:  Undefined index: transaction_type in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 173
+[20-Mar-2022 11:34:02 America/Chicago] PHP Notice:  Undefined index: transaction_type in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 173
+[20-Mar-2022 11:40:25 America/Chicago] PHP Notice:  Undefined variable: uid in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 106
+[20-Mar-2022 11:40:25 America/Chicago] PHP Notice:  Undefined variable: uid in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 162
+[20-Mar-2022 11:41:52 America/Chicago] PHP Notice:  Undefined variable: uid in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 106
+[20-Mar-2022 11:41:52 America/Chicago] PHP Notice:  Undefined variable: uid in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 162
+[20-Mar-2022 11:43:46 America/Chicago] PHP Notice:  Undefined variable: uid in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 109
+[20-Mar-2022 11:43:46 America/Chicago] PHP Notice:  Undefined variable: uid in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 165
+[20-Mar-2022 11:50:47 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 109
+[20-Mar-2022 11:50:47 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 165
+[20-Mar-2022 11:51:25 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 109
+[20-Mar-2022 11:51:25 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 165
+[20-Mar-2022 11:53:16 America/Chicago] PHP Notice:  Undefined variable: _SESSION in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 45
+[20-Mar-2022 11:53:16 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 111
+[20-Mar-2022 11:53:16 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 167
+[20-Mar-2022 11:53:51 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 116
+[20-Mar-2022 11:53:51 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 172
+[20-Mar-2022 11:54:51 America/Chicago] PHP Parse error:  syntax error, unexpected '=' in /home1/hummions/public_html/hwBackup/FarmersBank/login.php on line 49
+[20-Mar-2022 11:55:05 America/Chicago] PHP Parse error:  syntax error, unexpected '=' in /home1/hummions/public_html/hwBackup/FarmersBank/login.php on line 49
+[20-Mar-2022 11:55:07 America/Chicago] PHP Parse error:  syntax error, unexpected '=' in /home1/hummions/public_html/hwBackup/FarmersBank/login.php on line 49
+[20-Mar-2022 11:55:28 America/Chicago] PHP Parse error:  syntax error, unexpected '=' in /home1/hummions/public_html/hwBackup/FarmersBank/login.php on line 49
+[20-Mar-2022 11:55:32 America/Chicago] PHP Parse error:  syntax error, unexpected '=' in /home1/hummions/public_html/hwBackup/FarmersBank/login.php on line 49
+[20-Mar-2022 12:01:03 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 118
+[20-Mar-2022 12:01:03 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 174
+[20-Mar-2022 12:09:06 America/Chicago] PHP Notice:  Undefined variable: userEM in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 48
+[20-Mar-2022 12:11:26 America/Chicago] PHP Notice:  Undefined variable: userEM in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 48
+[20-Mar-2022 12:12:57 America/Chicago] PHP Notice:  Undefined variable: userEM in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 48
+[20-Mar-2022 12:12:57 America/Chicago] PHP Notice:  Undefined index: transaction_type in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 185
+[20-Mar-2022 12:12:57 America/Chicago] PHP Notice:  Undefined index: transaction_type in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 185
+[20-Mar-2022 12:13:48 America/Chicago] PHP Notice:  Undefined variable: userEM in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 48
+[20-Mar-2022 12:14:35 America/Chicago] PHP Notice:  Undefined variable: userEM in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 48
+[20-Mar-2022 12:14:35 America/Chicago] PHP Notice:  Undefined variable: userLgId in /home1/hummions/public_html/hwBackup/FarmersBank/index2.php on line 118

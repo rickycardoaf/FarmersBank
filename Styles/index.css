@@ -1,0 +1,40 @@
+body {
+  margin-top: 80px;
+  font-family: "Roboto, Sans-Serif";
+}
+
+nav {
+  margin-left: 50px;
+  /* margin-top: 70px; */
+}
+
+.container {
+  margin-left: 6%;
+}
+
+.btn {
+  border: 2px solid #03191e;
+  background-color: #03191e;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.sub-heading {
+  margin-top: 70px;
+}
+
+nav > button {
+  margin-bottom: 20px;
+}
+
+img {
+  margin-bottom: 80px;
+}
+
+h2 {
+  margin-bottom: 65px;
+}
